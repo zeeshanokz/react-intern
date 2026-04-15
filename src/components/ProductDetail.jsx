@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 
 function ProductDetail({ product, onBack, onAddToCart, cart, onGoToCart }) {
-  // State: quantity user wants to add
   const [quantity, setQuantity] = useState(1);
 
   function increment() {
@@ -34,8 +33,7 @@ function ProductDetail({ product, onBack, onAddToCart, cart, onGoToCart }) {
     <div className="pb-24 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <button
         onClick={onBack}
-        className="group flex items-center text-sm font-medium text-zinc-500 mb-8 hover:text-zinc-900 transition-colors"
-      >
+        className="group flex items-center text-sm font-medium text-zinc-500 mb-8 hover:text-zinc-900 transition-colors" >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 mr-2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
         </svg>
