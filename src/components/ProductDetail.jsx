@@ -32,7 +32,6 @@ function ProductDetail({ product, onBack, onAddToCart, cart, onGoToCart }) {
 
   return (
     <div className="pb-24 animate-in fade-in slide-in-from-bottom-4 duration-500">
-
       <button
         onClick={onBack}
         className="group flex items-center text-sm font-medium text-zinc-500 mb-8 hover:text-zinc-900 transition-colors"
@@ -48,8 +47,7 @@ function ProductDetail({ product, onBack, onAddToCart, cart, onGoToCart }) {
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-full object-cover"
-            />
+              className="w-full h-full object-cover" />
           </div>
         </div>
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
@@ -76,46 +74,30 @@ function ProductDetail({ product, onBack, onAddToCart, cart, onGoToCart }) {
           <div className="border-t pt-6">
   <div className="flex items-center gap-4 mb-6">
               <span>Quantity</span>
-
               <div className="flex items-center border rounded-lg">
                 <button 
                   onClick={decrement} 
-                  className="px-4 py-2 hover:bg-zinc-100 transition-colors"
-                >
-                  −
-                </button>
-
+                  className="px-4 py-2 hover:bg-zinc-100 transition-colors" >  − </button>
                 <div className="px-4 py-2 border-x">
                   {quantity}
                 </div>
-
                 <button 
                   onClick={increment} 
-                  className="px-4 py-2 hover:bg-zinc-100 transition-colors"
-                >
-                  +
-                </button>
+                  className="px-4 py-2 hover:bg-zinc-100 transition-colors" > + </button>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4">
-
-              <button
+           <button
                 onClick={() => onAddToCart(quantity)}
-                className="flex-1 bg-black text-white py-4 rounded-xl font-semibold hover:bg-zinc-800 transition-colors"
-              >
-                Add {quantity} to Cart • ${totalPrice.toFixed(2)}
-              </button>
+                className="flex-1 bg-black text-white py-4 rounded-xl font-semibold hover:bg-zinc-800 transition-colors" >
+                Add {quantity} to Cart • ${totalPrice.toFixed(2)} </button>
 
               {inCartQty > 0 ? (
                 <button
                   onClick={onGoToCart}
-                  className="flex-1 border border-cyan-600 text-cyan-600 py-4 rounded-xl font-semibold hover:bg-cyan-50 transition-colors"
-                >
-                  View Cart ({inCartQty})
-                </button>
+                  className="flex-1 border border-cyan-600 text-cyan-600 py-4 rounded-xl font-semibold hover:bg-cyan-50 transition-colors" >
+                  View Cart ({inCartQty})  </button>
               ) : null}
-
             </div>
 
           </div>

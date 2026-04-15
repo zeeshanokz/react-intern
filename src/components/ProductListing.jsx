@@ -132,16 +132,10 @@ function ProductListing({ onProductClick, onAddToCart }) {
                 className={
                   isActive
                     ? "px-4 py-2 rounded-full bg-black text-white"
-                    : "px-4 py-2 rounded-full bg-zinc-100"
-                }
-              >
-                {category}
-              </button>
+                    : "px-4 py-2 rounded-full bg-zinc-100" }>   {category}</button>
             );
           })}
-
         </div>
-
         <input
           type="text"
           placeholder="Search..."
@@ -170,17 +164,12 @@ function ProductListing({ onProductClick, onAddToCart }) {
         </div>
       ) : (
         <div className="text-center py-20">
-
           <h3>No products found</h3>
           <p>Try adjusting filters</p>
 
-          <button onClick={clearFilters} className="mt-4 text-cyan-600">
-            Clear filters
-          </button>
-
+          <button onClick={clearFilters} className="mt-4 text-cyan-600">  Clear filters </button>
         </div>
       )}
-
     </div>
   );
 }
