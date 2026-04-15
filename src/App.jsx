@@ -19,7 +19,7 @@ function App() {
     return [];
   });
 
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
 
 
